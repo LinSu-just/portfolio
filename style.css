@@ -281,3 +281,81 @@ html[lang='en'] h1,html[lang='en'] h2,html[lang='en'] h3{overflow-wrap:anywhere}
 @media(max-width:880px){.header-actions{gap:9px}.header-actions .resume{display:none}.lang-switch{width:40px;height:28px}.header{grid-template-columns:1fr auto}.ux-case-header{grid-template-columns:1fr auto}.ux-case-header .header-actions .ux-case-resume{display:none}.case-header .header-actions .case-resume{display:none}}
 @media(max-width:650px){html[lang='en'] .about-copy h2,html[lang='en'] .projects-heading h2,html[lang='en'] .section-heading h2,html[lang='en'] .contacts-copy h2{font-size:clamp(43px,13vw,68px);letter-spacing:-2px}.ux-case-header{padding-inline:20px}.ux-case{width:calc(100% - 32px)}.ux-crumbs{gap:8px;flex-wrap:wrap}.ux-brief,.identity-includes,.ux-process-block,.ux-works{border-radius:17px}.contact-card p{font-size:14px}.footer-top{gap:35px 20px}}
 @media(max-width:430px){.hero-copy{padding-top:22px}.hero h1{font-size:42px}.subtitle{font-size:20px}.description{font-size:16px}.contacts-copy h2{letter-spacing:-3px}.ux-case-cta{padding:25px 18px}.ux-case-cta h2{font-size:24px}.identity-includes,.ux-process-block,.ux-works{padding-inline:15px}}
+
+/* Надёжная адаптация для планшетов и телефонов */
+@media(max-width:880px){
+  html,body{width:100%;max-width:100%;overflow-x:hidden}
+  body{background:var(--paper)}
+  body *{min-width:0}
+  .header,.hero,.about-section,.projects-section,.services-section,.contacts-section{width:calc(100% - 32px);max-width:100%;margin-inline:auto}
+  .header{height:72px;padding-top:15px;align-items:start}
+  .header::before{left:calc(50% - 50vw);right:calc(50% - 50vw)}
+  .hero{height:auto!important;min-height:0;display:flex;overflow:hidden!important;clip-path:none!important;opacity:1!important;transform:none!important;filter:none!important;pointer-events:auto!important}
+  .hero-copy{width:100%;padding:34px 0 0}
+  .hero h1{max-width:100%;font-size:clamp(43px,11.5vw,68px);line-height:.96;letter-spacing:-2.5px;transform:none}
+  .hero .subtitle{max-width:100%;margin-top:20px;font-size:clamp(20px,5vw,27px);line-height:1.3;white-space:normal}
+  .hero .description{max-width:680px;margin-top:18px;font-size:18px;line-height:1.55}
+  .hero .description br{display:none}
+  .buttons{margin-top:30px;gap:13px}
+  .facts{margin-top:45px}
+  .portrait{width:100%;height:470px;min-height:0;margin:18px auto 0;overflow:hidden;transform:none}
+  .arch{bottom:0;width:min(72vw,360px);height:430px;border-radius:220px 220px 0 0}
+  .arch::before{inset:-12px -12px 0}
+  .portrait .portrait-image{left:50%;bottom:0;width:min(118vw,560px);max-width:none;transform:translate(-50%,48px)!important}
+  body.is-looking-at-buttons .portrait-default{opacity:1}
+  body.is-looking-at-buttons .portrait-buttons{opacity:0}
+  .about-section{min-height:0;padding:55px 0 65px}
+  .about-copy h2,.projects-heading h2,.section-heading h2,.contacts-copy h2{font-size:clamp(50px,13vw,76px);letter-spacing:-3px}
+  .about-text{font-size:17px;line-height:1.55}
+  .skills-card{margin-top:0}
+  .projects-section,.services-section,.contacts-section{padding-left:0;padding-right:0}
+  .project-card{height:350px}
+  .service-card{max-width:100%}
+  .contacts-section{grid-template-columns:1fr}
+  .contacts-main{width:100%}
+  .reveal,.reveal-left,.reveal-right{opacity:1!important;filter:none!important;transform:none!important;transition:none!important}
+  .footer{max-width:100%;overflow:hidden}
+  .case-orbit,.ux-intro-rings,.pack-hero-art>i,.brand-hero-art>i,.print-hero-art>i,.identity-hero-art>i{max-width:72vw;right:-12vw}
+}
+
+@media(max-width:620px){
+  .header,.hero,.about-section,.projects-section,.services-section,.contacts-section{width:calc(100% - 28px)}
+  .header-actions{gap:7px}
+  .lang-switch{min-width:70px;height:29px;padding-inline:5px}
+  .hero-copy{padding-top:24px}
+  .hero h1{font-size:clamp(40px,12.8vw,58px)}
+  .hero .subtitle{font-size:19px}
+  .hero .description{font-size:16px}
+  .buttons{width:100%;display:grid;grid-template-columns:1fr}
+  .button,.primary,.secondary{width:100%;max-width:100%}
+  .facts{width:100%;display:grid;grid-template-columns:1fr;gap:0;margin-top:38px}
+  .fact,.fact+.fact{min-height:0;padding:20px 0;border-left:0;border-bottom:1px solid rgb(168 118 85 / 35%)}
+  .portrait{height:390px;margin-top:8px}
+  .arch{width:min(74vw,290px);height:350px}
+  .portrait .portrait-image{width:min(124vw,480px);transform:translate(-50%,42px)!important}
+  .about-section{padding-top:45px}
+  .about-copy h2,.projects-heading h2,.section-heading h2,.contacts-copy h2{font-size:clamp(45px,14vw,64px);letter-spacing:-2px}
+  .about-rule{margin:24px 0 27px}
+  .about-text{font-size:16px;gap:20px}
+  .skills-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .project-card,.project-card--small,.project-card--wide{height:320px}
+  .project-copy{right:72px}
+  .project-copy strong{font-size:21px}
+  .service-card{min-height:620px}
+  .service-visual{top:50px;left:8%;width:84%;height:260px}
+  .service-content{top:325px;left:22px;right:22px}
+  .process-list article{grid-template-columns:48px 48px 1fr;padding-inline:0}
+  .contact-cards{grid-template-columns:1fr}
+  .contact-cta{height:285px}
+  .contact-cta>img{width:235px;right:-75px}
+  .footer{padding-inline:18px}
+  .footer-top{grid-template-columns:1fr 1fr}
+  .ux-case{width:calc(100% - 28px)}
+  .ux-intro,.pack-intro,.brand-intro,.print-intro,.identity-intro{padding-top:35px}
+  .ux-intro-visual,.pack-hero-art,.brand-hero-art,.print-hero-art,.identity-hero-art{height:290px}
+  .ux-intro h1,.pack-intro h1,.brand-intro h1,.print-intro h1,.identity-intro h1{font-size:clamp(42px,13vw,56px);letter-spacing:-2px}
+  .ux-brief{padding:24px 16px}
+  .ux-brief article,.ux-brief article+article{padding-left:0;padding-right:0}
+  .ux-process-block,.ux-works{padding:26px 15px 32px}
+  .ux-case-cta{grid-template-columns:1fr;padding:28px 20px}
+}
